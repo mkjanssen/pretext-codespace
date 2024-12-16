@@ -5,4 +5,41 @@
 
   <p> Text of section. </p>
 
+    <theorem xml:id="thm-kernel-is-ideal">
+<idx><h>kernel</h><h>is an ideal</h></idx>
+	  <statement>
+		<p>
+		  Given a ring homomorphism <m>\phi : R\to S</m>,
+		  <m>\ker\phi</m> is an ideal.
+		</p>
+	  </statement>
+	  <proof>
+		<p>
+		  If <m>x,y\in \ker\phi</m>, <m>\phi(x+y) = \phi(x) + \phi(y) = 0_S + 0_S = 0_S</m>.
+		  Similarly, if <m>x\in \ker \phi</m> and <m>r\in R</m>, <m>\phi(rx) = \phi(r) \phi(x) = \phi(r) 0_S = 0_S</m>.
+		</p>
+	  </proof>
+	</theorem>
+
+  <p>
+    As we see in <xref ref="thm-kernel-is-ideal" />, the kernel of a ring homomorphism is an ideal.
+  </p>
+
+  <sage language="macaulay2">
+    <input>
+    R = ZZ -- use QQ[x] or QQ[x,y] for other rings
+    a = ?
+    b = ?
+    I = ideal(?)
+    S = R/I
+    a_S == b_S
+    </input>
+  </sage>
+
+  <exercise>
+    <webwork source="Library/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg" />
+  </exercise>
+
+  <video youtube="QVKj3LADCnA" />
+
 </section>
